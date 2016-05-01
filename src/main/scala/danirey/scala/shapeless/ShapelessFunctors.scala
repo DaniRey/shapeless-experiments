@@ -1,3 +1,5 @@
+package danirey.scala.shapeless
+
 import shapeless._
 
 /**
@@ -23,9 +25,6 @@ object ShapelessFunctors extends App {
   println(tree.map(_.length))
 }
 
-/**
-  * Illustrative subset of the Cats Functor type class
-  */
 trait Functor[F[_]] {
   def map[A, B](fa: F[A])(f: A => B): F[B]
 }

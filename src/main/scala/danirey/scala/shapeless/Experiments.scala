@@ -1,8 +1,10 @@
-import shapeless._
+package danirey.scala.shapeless
 
 /**
   * @author Dani
   */
+import shapeless._
+
 object Experiments extends App {
 
   def mayPass() = person.tail.head < 2.0
@@ -30,6 +32,3 @@ object Experiments extends App {
   println("sum of person " + person.foldLeft(0)(plus))
   println("sizes " + person.map(size).toList.sum)
 }
-
-
-
