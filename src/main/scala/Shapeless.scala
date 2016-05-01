@@ -30,3 +30,6 @@ object Experiments extends App {
   println("sum of person " + person.foldLeft(0)(plus))
   println("sizes " + person.map(size).toList.sum)
 }
+
+
+
