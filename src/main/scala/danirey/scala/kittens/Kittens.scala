@@ -16,5 +16,6 @@ object Kittens extends App {
         )
     )
 
+  //println(Tree.f.map(tree)(_.length))
     println(funct.map(tree)(_.length))
 }
