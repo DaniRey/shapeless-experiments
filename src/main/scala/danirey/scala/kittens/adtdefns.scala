@@ -16,6 +16,7 @@
 
 package danirey.scala.kittens
 
+import cats.Functor
 import org.scalacheck.Arbitrary
 import org.scalacheck.Arbitrary.arbitrary
 
@@ -44,6 +45,10 @@ object AdtDefns {
   sealed trait Tree[T]
   final case class Leaf[T](t: T) extends Tree[T]
   final case class Node[T](l: Tree[T], r: Tree[T]) extends Tree[T]
+
+  object Tree {
+    implicit val f: Functor[Tree] = cats.derived.MkFunctor[Tree]
+  }
 
   case class CaseClassWOption[T](a: Option[T])
 
